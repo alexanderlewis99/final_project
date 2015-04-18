@@ -27,23 +27,22 @@ class Math
 		num1 = array[0]
 		num2 = array[2]
 
-		
 		while size > a do
+			tester = 0
 			if array[a] != "*"  and array[b] != "*"
-				array[a] = array[a] + array[b]
-				array.delete_at(b)
-
+				tester++
 			elsif array[a] != "/" and array[b] != "/"
-				array[a] = array[a] + array[b]
-				array.delete_at(b)
-
+				tester++
 			elsif array[a] != "+" and array[b] != "+"
-				array[a] = array[a] + array[b]
-				array.delete_at(b)
-
+				tester++
 			elsif array[a] != "-" and array[b] != "-"
+				tester++
+			elsif tester < 4
 				array[a] = array[a] + array[b]
 				array.delete_at(b)
+			else
+				# puts "WARNING! There is a virus on your computer!!!! Send 10 dollars to 125674.com to have it removed."
+				tester = 0
 			end
 			a++
 			b++
