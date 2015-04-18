@@ -2,8 +2,8 @@ class Math
 	# attr accessor @equation
 	create initialize method accept the equation as an argument
 
-	def initialize(@equation)
-		@nEquation = @equation 
+	def initialize(equation)
+		@nEquation = equation 
 
 	end
 	#store value in @equation in initialize
@@ -12,15 +12,17 @@ class Math
 	#@equation string, and split it into an array.
 
 	def calculate()
-		size = array.count
-		i = 2;
-		a = 0;
-		b = 1;
 
+		array = @nEquation.split
+
+		size = array.count
+		i = 2
+		a = 0
+		b = 1
 		c = 1
 
-		num1 = .1
-		num2 = .2
+		num1 = 0.1
+		num2 = 0.2
 
 		num1 = array[0]
 		num2 = array[2]
@@ -53,7 +55,7 @@ class Math
 			end
 		end
 
-		while size > b do
+		while size > c do
 			if array[c] == "*"
 				num1 = num1*num2
 
@@ -67,18 +69,13 @@ class Math
 				num1 = num1-num2
 
 			else
-				num2 = array[i+2];
+				num2 = array[i+2]
 			end
 			c++
 		end
 
+		@answer = num1
 
-
-
-
-
-	end
+	end	
 
 end
-
-Math.new(params[:Equation])
