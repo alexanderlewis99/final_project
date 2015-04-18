@@ -10,8 +10,15 @@ class MyApp < Sinatra::Base
 
   post '/results' do
   	@Equation = params[:Equation]
-  	puts @Equation
+  	@answer = eval(@Equation)
   	erb :answer
   	end
+
+
+
+  # @Equation.count('*')
+  # @Equation.count('+')
+  # @Equation.count('/')
+  # @Equation.count('-')
 
 end
