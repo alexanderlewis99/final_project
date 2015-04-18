@@ -7,4 +7,11 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
+
+  post '/results' do
+  	@Equation = params[:Equation]
+  	puts @Equation
+  	erb :answer
+  	end
+
 end
