@@ -9,9 +9,10 @@ class MyApp < Sinatra::Base
 
 
   post '/results' do
+  	Math.new(params[:Equation])
   	@Equation = params[:Equation]
-  	@answer = eval(@Equation)
-  	erb :answer
+  	# @answer = eval(@Equation)
+	erb :answer
   	end
 
 
