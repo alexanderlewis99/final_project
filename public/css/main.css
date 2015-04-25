@@ -29,3 +29,11 @@ h5{
 	font-family: 'Oxygen';
 	font-size: 75px;
 }
+
+div {
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
