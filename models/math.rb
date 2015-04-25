@@ -13,7 +13,9 @@ class Mathy
 
 	def calculate()
 
-		array = @nEquation.split("")
+		array = @nEquation.split(/(\d+)/)
+
+		array.delete_at(0)
 
 		size = array.size
 		a = 0
@@ -23,34 +25,6 @@ class Mathy
 		num1 = 0.0
 		num2 = 0.0
 
-		puts "size is #{size}"
-
-
-		# while size > a do
-		# 	tester = 0
-		# 	if array[a] != "*"  and array[b] != "*"
-		# 		tester+=1
-		# 	elsif array[a] != "/" and array[b] != "/"
-		# 		tester+=1
-		# 	elsif array[a] != "+" and array[b] != "+"
-		# 		tester+=1
-		# 	elsif array[a] != "-" and array[b] != "-"
-		# 		tester+=1
-		# 	elsif tester < 4
-		# 		array[a] = array[a] + array[b]
-		# 		array.delete_at(b)
-		# 	else
-		# 		tester = 0
-		# 	end
-		# 	a+=1
-		# 	b+=1
-		# end
-
-		# array.each do |item|
-		# 	if item.match(/\d/)
-		# 		item = item.to_i
-		# 	end
-		# end
 
 		num1 = array[0].to_i
 		num2 = array[2].to_i
