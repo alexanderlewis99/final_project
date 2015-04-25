@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require_relative "models/math.rb"
 
 class MyApp < Sinatra::Base
 
@@ -10,8 +11,9 @@ class MyApp < Sinatra::Base
 
   post '/results' do
   	@Equation = params[:Equation]
-  	calc = Math.new(params[:Equation])
+  	calc = Mathy.new(params[:Equation])
   	calc.calculate()
 	erb :answer
+	puts params[:Equation]
   end
 end
