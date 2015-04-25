@@ -13,11 +13,9 @@ class Mathy
 
 	def calculate()
 
-		array = @nEquation.split
+		array = @nEquation.split("")
 
-
-		size = array.count
-		i = 2
+		size = array.size
 		a = 0
 		b = 1
 		c = 0
@@ -25,43 +23,41 @@ class Mathy
 		num1 = 0.0
 		num2 = 0.0
 
-		
+		puts "size is #{size}"
 
 
-		while size > a do
-			tester = 0
-			if array[a] != "*"  and array[b] != "*"
-				tester+=1
-			elsif array[a] != "/" and array[b] != "/"
-				tester+=1
-			elsif array[a] != "+" and array[b] != "+"
-				tester+=1
-			elsif array[a] != "-" and array[b] != "-"
-				tester+=1
-			elsif tester < 4
-				array[a] = array[a] + array[b]
-				array.delete_at(b)
-			else
-				tester = 0
-			end
-			a+=1
-			b+=1
-		end
+		# while size > a do
+		# 	tester = 0
+		# 	if array[a] != "*"  and array[b] != "*"
+		# 		tester+=1
+		# 	elsif array[a] != "/" and array[b] != "/"
+		# 		tester+=1
+		# 	elsif array[a] != "+" and array[b] != "+"
+		# 		tester+=1
+		# 	elsif array[a] != "-" and array[b] != "-"
+		# 		tester+=1
+		# 	elsif tester < 4
+		# 		array[a] = array[a] + array[b]
+		# 		array.delete_at(b)
+		# 	else
+		# 		tester = 0
+		# 	end
+		# 	a+=1
+		# 	b+=1
+		# end
 
-		array.each do |item|
-			if item.match(/\d/)
-				item = item.to_i
-			end
-		end
+		# array.each do |item|
+		# 	if item.match(/\d/)
+		# 		item = item.to_i
+		# 	end
+		# end
 
-
-
-		num1 = array[0].to_f
-		num2 = array[2].to_f
+		num1 = array[0].to_i
+		num2 = array[2].to_i
 
 		size = array.count
-		while c < size do
 
+		while c < size do
 			if array[c] == "*"
 				num1 = num1*num2
 
@@ -75,13 +71,12 @@ class Mathy
 				num1 = num1-num2
 
 			else
-				num2 = array[i+2]
+				num2 = array[c+2].to_i
 			end
 			c+=1
 		end
 
 		@answer = num1
-		puts @answer
 
 	end	
 
