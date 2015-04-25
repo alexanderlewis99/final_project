@@ -30,7 +30,7 @@ h5{
 	font-size: 75px;
 }
 
-div {
+.box {
     background-color: lightgrey;
     width: 300px;
     padding: 25px;
