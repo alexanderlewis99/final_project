@@ -9,11 +9,14 @@ class MyApp < Sinatra::Base
   end
 
 
-  post '/results' do
+  post '/answer' do
   	@Equation = params[:Equation]
   	calc = Mathy.new(params[:Equation])
   	calc.calculate()
-	erb :answer
-	puts params[:Equation]
+  	@visualAnswer = calc.answer
+	  erb :answer
   end
+
+  
+
 end

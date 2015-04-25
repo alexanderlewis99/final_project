@@ -1,7 +1,7 @@
 class Mathy
 	# attr accessor @equation
 	# create initialize method accept the equation as an argument
-
+	attr_accessor :answer
 	def initialize(equation)
 		@nEquation = equation 
 
