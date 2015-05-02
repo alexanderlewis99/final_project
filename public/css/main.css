@@ -1,4 +1,4 @@
- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen">*/
+ <link rel="stylesheet" type="text/css" href=http://fonts.googleapis.com/css?family=Oxygen>*/
 
 h1{
 	font-family: Times;
@@ -20,29 +20,25 @@ h5{
 
 .welcome{
 	color: #FF7519;
-	font-size: 20px;
-	font-family: ;
+	font-size: 40px;
 
 }
 
 .stanley{
 	color: #660099;
-	font-size: 20px;
-	font-family: ;
+	font-size: 40px;
 
 }
 
 .diego{
 	color: #0066CC;
-	font-size: 20px;
-	font-family: ;
+	font-size: 40px;
 
 }
 
 .alec{
 	color: #009900;
-	font-size: 20px;
-	font-family: ;
+	font-size: 40px;
 
 }
 
@@ -59,4 +55,23 @@ h5{
     border: 25px solid navy;
     margin: 25px;
     word-wrap: break-word;
+}
+
+.font-effect-3d {
+	font-family: 'Oxygen';
+	color: #FFFFFF;
+}
+
+.background{
+	background-color: #003300;
+	color: #FFFFFF;
+}
+
+.font-effect-neon{
+
+}
+
+input{
+    width: 640px;
+    height: 200px;
 }
