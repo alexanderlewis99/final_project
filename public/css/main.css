@@ -28,6 +28,7 @@ h5{
 .answer{
 	font-family: 'Oxygen';
 	font-size: 75px;
+	word-wrap: break-word;
 }
 
 .box {
@@ -36,4 +37,5 @@ h5{
     padding: 25px;
     border: 25px solid navy;
     margin: 25px;
+    word-wrap: break-word;
 }
